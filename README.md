@@ -1,10 +1,20 @@
-##Little flask app
 
-###Prerequisites
-$ pip3 install flask sqlalchemy flask-sqlalchemy mysql-python
 
-###Database
-$ mysql -u root
+##Little flask app with mysql
 
+###Prerequisites conda and python 3.8 installed 
+$ pip install flask sqlalchemy flask-sqlalchemy
+
+on ubuntu I had to install : sudo apt-get install python3-dev libmysqlclient-dev 
+
+before : 
+
+$ pip install mysqlclient
+
+###Database $ mysql -u root
 
 First step to create a little flask app with some crud functions
+
+
+
+
