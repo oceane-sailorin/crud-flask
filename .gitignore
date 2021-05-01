@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 .idea/
+.DS_Store
 
 
 # Distribution / packaging
@@ -22,7 +23,6 @@ MANIFEST
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
-idea/
 
 
 # Installer logs
