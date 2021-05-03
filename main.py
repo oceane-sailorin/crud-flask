@@ -11,7 +11,7 @@ app = create_app('dev')
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.form:
-        name = Wintersport(wintersport=request.form.get("name"))
+        name = Wintersport(name=request.form.get("name"))
         db.session.add(name)
         db.session.commit()
 
