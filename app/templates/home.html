@@ -18,6 +18,10 @@
             <input type="text" value="{{wintersport.name}}" name="newsport">
             <input type="submit" value="Update">
           </form>
+        <form method="POST" action="./delete">
+          <input type="hidden" value="{{wintersport.name}}" name="name">
+          <input type="submit" value="Delete">
+        </form>
     {% endfor %}
 </body>
 </html>

@@ -28,5 +28,14 @@ def update():
     db.session.commit()
     return redirect("/")
 
+@app.route("/delete", methods=["POST"])
+def delete():
+    name = request.form.get("name")
+    wintersport = Wintersport.query.filter_by(name=name).first()
+    db.session.delete(wintersport)
+    db.session.commit()
+    return redirect("/")
+
+
 if __name__ == '__main__':
     app.run()
