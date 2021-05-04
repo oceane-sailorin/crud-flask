@@ -13,6 +13,11 @@
     <h1>Wintersports</h1>
     {% for wintersport in wintersports %}
       <p>{{wintersport.name}}</p>
+        <form method="POST" action="./update">
+            <input type="hidden" value="{{wintersport.name}}" name="currentsport">
+            <input type="text" value="{{wintersport.name}}" name="newsport">
+            <input type="submit" value="Update">
+          </form>
     {% endfor %}
 </body>
 </html>
