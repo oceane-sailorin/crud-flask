@@ -2,6 +2,7 @@
 
 class Config(object):
     """ config for all env """
+    DEBUG = False
 
 
 class DevConfig(Config):

@@ -4,7 +4,7 @@ from app import db
 class Wintersport(db.Model):
 
     """
-    Create a Department table
+    Create a wintersports table
     """
 
     __tablename__ = 'wintersports'
