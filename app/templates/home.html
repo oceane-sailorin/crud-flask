@@ -2,26 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>crud flask</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-<form method="POST" action="/">
-      <input type="text" name="name">
-      <input type="submit" value="Add">
-    </form>
-
+ <div>
     <h1>Wintersports</h1>
-    {% for wintersport in wintersports %}
-      <p>{{wintersport.name}}</p>
-        <form method="POST" action="./update">
-            <input type="hidden" value="{{wintersport.name}}" name="currentsport">
-            <input type="text" value="{{wintersport.name}}" name="newsport">
-            <input type="submit" value="Update">
-          </form>
-        <form method="POST" action="./delete">
-          <input type="hidden" value="{{wintersport.name}}" name="name">
-          <input type="submit" value="Delete">
+    <div class="form-style-2">
+    <div class="form-style-2-heading">Add a wintersport</div>
+        <form method="POST" action="/">
+          <label><input type="text" name="name" class="input-field" /></label>
+          <input type="submit" value="Add">
         </form>
+    </div>
+    <div class="form-style-2-heading">List of wintersports</div>
+    {% for wintersport in wintersports %}
+     <div class="form-style-2-name">{{wintersport.name}}</div>
+        <div class="form-style-2">
+            <div class="form-style-3">
+            <form method="POST" action="./update">
+                <input type="hidden" value="{{wintersport.name}}" name="currentsport">
+                <label for="newsport"><span>Name <span class="required">*</span></span><input type="text" class="input-field"  value="{{wintersport.name}}" name="newsport" /></label>
+                <input type="submit" value="Update" />
+              </form>
+                </div>
+            <div class="form-style-3">
+            <form method="POST" action="./delete">
+              <input type="hidden" value="{{wintersport.name}}" name="name">
+              <input type="submit" value="Delete">
+            </form>
+            </div>
+        </div>
+
     {% endfor %}
+     </div>
 </body>
 </html>
